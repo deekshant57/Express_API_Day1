@@ -1,0 +1,201 @@
+Last login: Mon Mar  7 15:25:00 on ttys003
+deekshant@Deekshants-MacBook-Air ~ % brew services start mongodb-community@5.0
+==> Tapping homebrew/services
+Cloning into '/opt/homebrew/Library/Taps/homebrew/homebrew-services'...
+remote: Enumerating objects: 1863, done.
+remote: Counting objects: 100% (370/370), done.
+remote: Compressing objects: 100% (124/124), done.
+remote: Total 1863 (delta 272), reused 281 (delta 241), pack-reused 1493
+Receiving objects: 100% (1863/1863), 518.10 KiB | 1.35 MiB/s, done.
+Resolving deltas: 100% (827/827), done.
+Tapped 1 command (44 files, 662.7KB).
+==> Successfully started `mongodb-community` (label: homebrew.mxcl.mongodb-commu
+deekshant@Deekshants-MacBook-Air ~ % show db
+zsh: command not found: show
+deekshant@Deekshants-MacBook-Air ~ % use test
+zsh: command not found: use
+deekshant@Deekshants-MacBook-Air ~ % use test db
+zsh: command not found: use
+deekshant@Deekshants-MacBook-Air ~ % mongod
+{"t":{"$date":"2022-03-07T15:35:56.965+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"-","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2022-03-07T15:35:56.967+05:30"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true}}}
+{"t":{"$date":"2022-03-07T15:35:56.967+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2022-03-07T15:35:56.967+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","ns":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","ns":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":9263,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"Deekshants-MacBook-Air.local"}}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"5.0.6","gitVersion":"212a8dbb47f07427dae194a9c75baec1d81d9259","modules":[],"allocator":"system","environment":{"distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Mac OS X","version":"21.3.0"}}}
+{"t":{"$date":"2022-03-07T15:35:56.968+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2022-03-07T15:35:56.969+05:30"},"s":"E",  "c":"CONTROL",  "id":20568,   "ctx":"initandlisten","msg":"Error setting up listener","attr":{"error":{"code":9001,"codeName":"SocketException","errmsg":"Address already in use"}}}
+{"t":{"$date":"2022-03-07T15:35:56.969+05:30"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+{"t":{"$date":"2022-03-07T15:35:56.970+05:30"},"s":"I",  "c":"COMMAND",  "id":4784923, "ctx":"initandlisten","msg":"Shutting down the ServiceEntryPoint"}
+test> db.dropDatabase()
+{ ok: 1, dropped: 'test' }
+test> show dbs
+admin     41 kB
+config  61.4 kB
+local     41 kB
+test> use assignment
+switched to db assignment
+assignment> db.createCollection("users")
+{ ok: 1 }
+assignment> db.users.insert({"first_name":"Deekshant"})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("6226386a43279ece69971456") }
+}
+assignment> db.users.insertOne({"first_name":"Deekshant"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6226389143279ece69971457")
+}
+assignment> db.users.insertOne({"last_name":"Vaishnav"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("62263f8943279ece69971458")
+}
+assignment> db.users.insertOne({"email":"deekshant_fw15_083@masai.school"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("62263fe443279ece69971459")
+}
+assignment> db.users,insertOne({gender:"Male"})
+ReferenceError: insertOne is not defined
+assignment> db.users.insertOne({gender:"Male"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6227535243279ece6997145a")
+}
+assignment> db.users.insertOne({ip_address:"192.268.1.107"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6227538943279ece6997145b")
+}
+assignment> db.users.insertOne({age:"29"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("622753a443279ece6997145c")
+}
+assignment> db.users.insertMany({first_name:"Aman"},{last_name:"Jain"},{email:"amanjain@gmail.com"},{gender:"Male"},{ip_address:"192.168.2.298"},{age:"28"})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+assignment> db.users.insertMany([{first_name:"Aman"},{last_name:"Jain"},{email:"amanjain@gmail.com"},{gender:"Male"},{ip_address:"192.168.2.298"},{age:"28"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6227546b43279ece6997145d"),
+    '1': ObjectId("6227546b43279ece6997145e"),
+    '2': ObjectId("6227546b43279ece6997145f"),
+    '3': ObjectId("6227546b43279ece69971460"),
+    '4': ObjectId("6227546b43279ece69971461"),
+    '5': ObjectId("6227546b43279ece69971462")
+  }
+}
+assignment> db.users.find({})
+[
+  {
+    _id: ObjectId("6226386a43279ece69971456"),
+    first_name: 'Deekshant'
+  },
+  {
+    _id: ObjectId("6226389143279ece69971457"),
+    first_name: 'Deekshant'
+  },
+  { _id: ObjectId("62263f8943279ece69971458"), last_name: 'Vaishnav' },
+  {
+    _id: ObjectId("62263fe443279ece69971459"),
+    email: 'deekshant_fw15_083@masai.school'
+  },
+  { _id: ObjectId("6227535243279ece6997145a"), gender: 'Male' },
+  {
+    _id: ObjectId("6227538943279ece6997145b"),
+    ip_address: '192.268.1.107'
+  },
+  { _id: ObjectId("622753a443279ece6997145c"), age: '29' },
+  { _id: ObjectId("6227546b43279ece6997145d"), first_name: 'Aman' },
+  { _id: ObjectId("6227546b43279ece6997145e"), last_name: 'Jain' },
+  {
+    _id: ObjectId("6227546b43279ece6997145f"),
+    email: 'amanjain@gmail.com'
+  },
+  { _id: ObjectId("6227546b43279ece69971460"), gender: 'Male' },
+  {
+    _id: ObjectId("6227546b43279ece69971461"),
+    ip_address: '192.168.2.298'
+  },
+  { _id: ObjectId("6227546b43279ece69971462"), age: '28' }
+]
+assignment> db.users.find({}).pretty()
+[
+  {
+    _id: ObjectId("6226386a43279ece69971456"),
+    first_name: 'Deekshant'
+  },
+  {
+    _id: ObjectId("6226389143279ece69971457"),
+    first_name: 'Deekshant'
+  },
+  { _id: ObjectId("62263f8943279ece69971458"), last_name: 'Vaishnav' },
+  {
+    _id: ObjectId("62263fe443279ece69971459"),
+    email: 'deekshant_fw15_083@masai.school'
+  },
+  { _id: ObjectId("6227535243279ece6997145a"), gender: 'Male' },
+  {
+    _id: ObjectId("6227538943279ece6997145b"),
+    ip_address: '192.268.1.107'
+  },
+  { _id: ObjectId("622753a443279ece6997145c"), age: '29' },
+  { _id: ObjectId("6227546b43279ece6997145d"), first_name: 'Aman' },
+  { _id: ObjectId("6227546b43279ece6997145e"), last_name: 'Jain' },
+  {
+    _id: ObjectId("6227546b43279ece6997145f"),
+    email: 'amanjain@gmail.com'
+  },
+  { _id: ObjectId("6227546b43279ece69971460"), gender: 'Male' },
+  {
+    _id: ObjectId("6227546b43279ece69971461"),
+    ip_address: '192.168.2.298'
+  },
+  { _id: ObjectId("6227546b43279ece69971462"), age: '28' }
+]
+assignment> db.users.findOne({})
+{ _id: ObjectId("6226386a43279ece69971456"), first_name: 'Deekshant' }
+assignment> db.users.update({first_name:"Deekshant"},{$set:{"city":"Pune"}})
+DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+assignment> db.users.findOne({})
+{
+  _id: ObjectId("6226386a43279ece69971456"),
+  first_name: 'Deekshant',
+  city: 'Pune'
+}
+assignment> db.users.remove({})
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 13 }
+assignment> 
+
+assignment> db.users.find({})
+
+assignment> db.dropDatabase()
+{ ok: 1, dropped: 'assignment' }
+assignment> show dbs
+admin     41 kB
+config  98.3 kB
+local     41 kB
+assignment> 
