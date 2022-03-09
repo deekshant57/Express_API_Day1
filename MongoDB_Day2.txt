@@ -1,0 +1,48 @@
+
+admin> use movies
+switched to db movies
+movies> show collections
+
+movies> db.createCollection("movies_data")
+{ ok: 1 }
+movies> db.movies_data.count()
+0
+movies> db.movies_data.count()
+500
+movies> db.movies_data.find({},{movie_name:1}).pretty()
+
+movies> db.movies_data.find({},{movie_name:1},{production_year:1}).pretty()
+
+movies> db.movies_data.find({},{movie_name:1},{production_year:1}).pretty()
+
+movies> db.movies_data.find({},{movie_name:1,production_year:1}).pretty()
+
+movies> db.movies_data.find({},{movie_name:0},{production_year:1}).pretty()
+
+movies> db.movies_data.find({budget:{$gte:10000}},{movie_name:1,production_year:1}).pretty()
+
+movies> db.movies_data.find({budget:{$gte:10000}},{movie_name:1,production_year:1,budget:1}).pretty()
+
+movies> db.movies_data.find({budget:{$lte:10000}},{movie_name:1,production_year:1,budget:1}).pretty()
+
+movies> db.movies_data.find({$and: [{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+
+movies> db.movies_data.find({$and: [{production_year:{$gt:2000}},{budget:{$gt:10000}}]},{movie_name:1}).pretty()
+
+movies> db.movies_data.find({$and: [{production_year:{$gt:2000}},{budget:{$gt:10000}}]},{movie_name:1,production_year:1}).pretty()
+
+movies> db.movies_data.find({$or: [{production_year:{$gt:2000}},{budget:{$gt:10000}}]},{movie_name:1,production_year:1}).pretty()
+
+movies> db.movies_data.find({$nor: [{production_year:{$gt:2000}}]}).pretty()
+
+movies> db.movies_data.find({$nor: [{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+
+movies> db.movies_data.find({production_year:{$not:{$eq:2000}}}).pretty()
+
+movies> db.movies_data.find({production_year:{$in:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]}}).pretty()
+
+movies> db.movies_data.find({}).sort({production_year:-1},{movie_name:1}).pretty()
+
+movies> db.movies_data.find({}).skip(10).limit(5).pretty()
+
+movies> 
